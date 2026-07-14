@@ -1,12 +1,6 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8"/>
-<title>ENAE · Formación In Company</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
-<style>
+import codecs
 
+css = """
 :root{
   --granate:#A91831; --granate2:#7c1226; --negro:#1C1E1D; --azul:#F4F7F9; --azul-dark:#D1DCE5;
   --blanco:#ffffff; --gris:#505050; --grismed:#8a8a8a;
@@ -170,7 +164,17 @@ h2 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:va
 /* Animation tweaks */
 @keyframes fadeInUp { from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);} }
 .slide.active > div:not(.ghost-num):not(.content-footer):not(.bg-photo) { animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+"""
 
+html_structure = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>ENAE · Formación In Company</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+[CSS_PLACEHOLDER]
 </style>
 </head>
 <body>
@@ -533,3 +537,9 @@ h2 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:va
 </script>
 </body>
 </html>
+"""
+
+final_html = html_structure.replace('[CSS_PLACEHOLDER]', css)
+
+with codecs.open('/Users/jesus/Documents/GitHub/ENAE-Incompany/ENAE-Incompany/index.html', 'w', 'utf-8') as f:
+    f.write(final_html)
