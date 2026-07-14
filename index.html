@@ -27,8 +27,8 @@ html,body{ width:100%; height:100%; background:#000; overflow:hidden; font-famil
 .content-footer .dot{ width:8px; height:8px; background:var(--granate); border-radius:50%; flex:none; }
 .content-footer .idx{ font-weight:700; font-size:14px; letter-spacing:2px; color:var(--grismed); }
 
-h2 { font-weight:800; font-size:56px; line-height:1.1; color:var(--negro); letter-spacing:-1px; }
-h2 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:var(--granate); }
+h2 { font-weight:900; font-size:60px; line-height:1.05; color:var(--negro); letter-spacing:-2.5px; }
+h2 em { font-family:"Open Sans", sans-serif; font-style:italic; font-weight:700; color:var(--granate); }
 .kicker { font-weight:800; font-size:14px; letter-spacing:4px; text-transform:uppercase; color:var(--granate); display:flex; align-items:center; gap:12px; margin-bottom:24px; }
 .kicker::before { content:""; width:30px; height:2px; background:var(--granate); }
 
@@ -45,11 +45,11 @@ h2 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:va
 
 /* S01: Cover */
 #s01 { background:linear-gradient(145deg, #1A1A1A, var(--negro)); color:#fff; flex-direction:row; justify-content:flex-start; align-items:center; padding-left:100px; }
-#s01 .photo-bento { position:absolute; right:40px; top:40px; bottom:40px; width:45%; border-radius:32px; overflow:hidden; box-shadow:0 40px 80px rgba(0,0,0,0.5); }
-#s01 .photo-bento img { width:100%; height:100%; object-fit:cover; }
+#s01 .photo-bento { position:absolute; right:100px; top:120px; bottom:120px; width:30%; border-radius:32px; background:linear-gradient(135deg, var(--azul), #ffffff); box-shadow:0 40px 80px rgba(0,0,0,0.5); }
+#s01 .photo-bento img { position:absolute; bottom:0; left:-25%; width:150%; height:auto; object-fit:contain; filter:drop-shadow(0 -10px 40px rgba(0,0,0,0.25)); }
 #s01 .content { position:relative; z-index:2; max-width:800px; }
-#s01 h1 { font-weight:800; font-size:72px; line-height:1.05; letter-spacing:-1.5px; margin-bottom:30px; }
-#s01 h1 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:var(--granate); }
+#s01 h1 { font-weight:900; font-size:76px; line-height:1.05; letter-spacing:-3px; margin-bottom:30px; }
+#s01 h1 em { font-family:"Open Sans", sans-serif; font-style:italic; font-weight:700; color:var(--granate); }
 #s01 p.lead { font-weight:300; font-size:24px; line-height:1.5; color:rgba(255,255,255,.8); max-width:650px; }
 #s01 .kicker { color:#fff; margin-bottom:30px; opacity:0.9; }
 #s01 .kicker::before { background:#fff; }
@@ -76,6 +76,8 @@ h2 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:va
 #s03 .right-list li { font-size:22px; font-weight:300; color:rgba(255,255,255,.8); display:flex; align-items:center; gap:16px; }
 #s03 .right-list li::before { content:""; width:8px; height:8px; border-radius:50%; background:var(--granate); display:inline-block; }
 
+
+#s03 .breakout-center { position:absolute; bottom:0; /* left: 50%; */ transform:translateX(-50%); width:460px; z-index:10; pointer-events:none; filter:drop-shadow(0 20px 50px rgba(0,0,0,0.5)); }
 /* S04: Filosofia */
 #s04 { align-items:center; text-align:center; padding:0 200px; background:linear-gradient(180deg, #fff, var(--azul)); }
 #s04 h2 { font-size:64px; line-height:1.15; max-width:1200px; margin-bottom:50px; }
@@ -148,17 +150,20 @@ h2 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:va
 
 /* S12: FUNDAE */
 #s12 { padding:0 100px; }
-#s12 .fundae-box { display:flex; background:var(--negro); border-radius:32px; overflow:hidden; margin-top:50px; color:#fff; box-shadow:0 30px 60px rgba(0,0,0,.2); }
+#s12 .fundae-box { display:flex; background:var(--negro); border-radius:32px; overflow:visible; margin-top:50px; color:#fff; box-shadow:0 30px 60px rgba(0,0,0,.2); }
 #s12 .f-left { width:55%; padding:80px; }
 #s12 .f-left h3 { font-size:44px; margin-bottom:24px; }
 #s12 .f-left p { font-size:20px; font-weight:300; line-height:1.6; color:rgba(255,255,255,.7); margin-bottom:40px; }
 #s12 .f-steps { display:flex; flex-direction:column; gap:20px; }
 #s12 .f-step { display:flex; align-items:center; gap:20px; font-size:18px; font-weight:500; }
 #s12 .f-step .check { width:32px; height:32px; border-radius:50%; background:var(--granate); display:flex; align-items:center; justify-content:center; }
-#s12 .f-right { width:45%; background:linear-gradient(135deg, var(--granate2), var(--granate)); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:60px; }
+#s12 .f-right { position:relative; width:45%; background:linear-gradient(135deg, var(--granate2), var(--granate)); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:60px; border-radius:0 32px 32px 0; }
 #s12 .f-right b { font-size:120px; font-weight:900; line-height:1; margin-bottom:10px; }
 #s12 .f-right span { font-size:24px; font-weight:700; letter-spacing:4px; text-transform:uppercase; }
 
+
+#s12 .f-right img.breakout-hand { position:absolute; bottom:-200px; right:-130px; height:130%; width:auto; z-index:5; filter:drop-shadow(-20px 20px 40px rgba(0,0,0,0.5)); pointer-events:none; }
+#s12 .f-right b, #s12 .f-right span { position:relative; z-index:2; text-shadow:0 10px 30px rgba(0,0,0,0.3); }
 /* S13: Cierre */
 #s13 { padding:0; align-items:center; text-align:center; background:linear-gradient(145deg, #111, var(--negro)); color:#fff; }
 #s13 .bg-photo { position:absolute; inset:0; opacity:0.15; object-fit:cover; width:100%; height:100%; mix-blend-mode:luminosity; }
@@ -188,7 +193,7 @@ h2 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:va
     <p class="lead">Diseñamos experiencias de aprendizaje personalizadas para desarrollar las capacidades que tu organización necesita hoy y mañana.</p>
   </div>
   <div class="photo-bento">
-    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200" alt="Equipo">
+    <img src="assets/man_presenting.png" alt="Equipo">
   </div>
 </section>
 
@@ -223,6 +228,7 @@ h2 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:va
 <section class="slide" id="s03">
   <div class="ghost-num" style="color:rgba(255,255,255,0.02); z-index:0;">02</div>
   <div class="content-footer"><div class="brandmark" style="color:rgba(255,255,255,.5);"><div class="dot"></div>ENAE Business School</div></div>
+  <img src="assets/hand_blocks.png" class="breakout-center">
   <div class="half left">
     <div class="kicker">Lo que ocurre en muchas organizaciones</div>
     <h2>Cuando el talento no evoluciona, el <em>negocio se resiente</em></h2>
@@ -433,7 +439,7 @@ h2 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:va
   <h2>El talento <em>en acción</em></h2>
   <div class="testimonial-bento">
     <div class="t-photo">
-      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="Testimonio">
+      <img src="assets/photo_portrait.jpg" alt="Testimonio">
     </div>
     <div class="t-content">
       <div class="quote">"La personalización del programa In Company supuso un antes y un después. No solo aprendimos nuevas metodologías ágiles, sino que las aplicamos directamente a nuestros cuellos de botella logrando una mejora de eficiencia del 30%."</div>
@@ -478,6 +484,7 @@ h2 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:va
       </div>
     </div>
     <div class="f-right">
+      <img src="assets/hand_ok.png" class="breakout-hand">
       <b>100%</b>
       <span>Bonificable</span>
     </div>
@@ -489,7 +496,7 @@ h2 em { font-family:var(--f-serif); font-style:italic; font-weight:700; color:va
   <div class="content-footer" style="bottom:60px; left:100px;">
     <div class="brandmark" style="color:rgba(255,255,255,.5);"><div class="dot"></div>ENAE Business School</div>
   </div>
-  <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1920" class="bg-photo" alt="Background">
+  <img src="assets/duo_workshop.jpg" class="bg-photo" alt="Background">
   <div class="content">
     <h2>Diseñemos juntos el programa<br>que <em>necesita tu empresa</em></h2>
     <p>Cada empresa es diferente. Por eso cada programa también lo es. Nuestro equipo analizará las necesidades de tu organización para diseñar una formación alineada con tus objetivos estratégicos.</p>
