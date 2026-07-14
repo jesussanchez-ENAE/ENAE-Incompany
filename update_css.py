@@ -1,0 +1,43 @@
+with open('/Users/jesus/Documents/GitHub/ENAE-Incompany/ENAE-Incompany/index.html', 'r', encoding='utf-8') as f:
+    html = f.read()
+
+# Replace CSS selectors for s2 to also apply to s2c
+html = html.replace('#s2{', '#s2, #s2c{')
+html = html.replace('#s2 .ghost-num{', '#s2 .ghost-num, #s2c .ghost-num{')
+html = html.replace('#s2 .head{', '#s2 .head, #s2c .head{')
+html = html.replace('#s2 h2{', '#s2 h2, #s2c h2{')
+html = html.replace('#s2 .items{', '#s2 .items, #s2c .items{')
+html = html.replace('#s2 .items {', '#s2 .items, #s2c .items {')
+html = html.replace('#s2 .item{', '#s2 .item, #s2c .item{')
+html = html.replace('#s2 .icon-badge{', '#s2 .icon-badge, #s2c .icon-badge{')
+html = html.replace('#s2 h3{', '#s2 h3, #s2c h3{')
+html = html.replace('#s2 p{', '#s2 p, #s2c p{')
+html = html.replace('#s2 .idx{', '#s2 .idx, #s2c .idx{')
+
+# Replace CSS selectors for s4 to also apply to s2b
+html = html.replace('#s4{', '#s4, #s2b{')
+html = html.replace('#s4 .ghost-num{', '#s4 .ghost-num, #s2b .ghost-num{')
+html = html.replace('#s4 .head{', '#s4 .head, #s2b .head{')
+html = html.replace('#s4 h2{', '#s4 h2, #s2b h2{')
+html = html.replace('#s4 h2 em{', '#s4 h2 em, #s2b h2 em{')
+html = html.replace('#s4 .body{', '#s4 .body, #s2b .body{')
+html = html.replace('#s4 .left{', '#s4 .left, #s2b .left{')
+html = html.replace('#s4 .left p.intro{', '#s4 .left p.intro, #s2b .left p.intro{')
+html = html.replace('#s4 .qa{', '#s4 .qa, #s2b .qa{')
+html = html.replace('#s4 .qa h4{', '#s4 .qa h4, #s2b .qa h4{')
+html = html.replace('#s4 .qa p{', '#s4 .qa p, #s2b .qa p{')
+html = html.replace('#s4 .reqs{', '#s4 .reqs, #s2b .reqs{')
+html = html.replace('#s4 .req{', '#s4 .req, #s2b .req{')
+html = html.replace('#s4 .req .icon-badge{', '#s4 .req .icon-badge, #s2b .req .icon-badge{')
+html = html.replace('#s4 .req .icon-badge svg{', '#s4 .req .icon-badge svg, #s2b .req .icon-badge svg{')
+html = html.replace('#s4 .req span{', '#s4 .req span, #s2b .req span{')
+html = html.replace('#s4 .right{', '#s4 .right, #s2b .right{')
+html = html.replace('#s4 .card{', '#s4 .card, #s2b .card{')
+html = html.replace('#s4 .card .fundae-plate{', '#s4 .card .fundae-plate, #s2b .card .fundae-plate{')
+html = html.replace('#s4 .card .fundae-plate img{', '#s4 .card .fundae-plate img, #s2b .card .fundae-plate img{')
+html = html.replace('#s4 .card .stat{', '#s4 .card .stat, #s2b .card .stat{')
+html = html.replace('#s4 .card .stat-label{', '#s4 .card .stat-label, #s2b .card .stat-label{')
+html = html.replace('#s4 .card .note{', '#s4 .card .note, #s2b .card .note{')
+
+with open('/Users/jesus/Documents/GitHub/ENAE-Incompany/ENAE-Incompany/index.html', 'w', encoding='utf-8') as f:
+    f.write(html)
